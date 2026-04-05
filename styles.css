@@ -2,3 +2,90 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
+
+:root {
+    --blurple: #5865F2;
+    --maincolor: #2C2F33;
+    --secondary: #23272A;
+
+    --accenttoaccent: #99AAb5;
+}
+
+.header-nav {
+    display: flex;
+    grid-area: header;
+    color: var(--accenttoaccent);
+    background-color: var(--maincolor);
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    padding: 0 16px;
+    min-height: 30px;
+}
+
+.header-nav #header-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "gg sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header-nav #header-text img {
+    margin-right: 5px;
+    height: 20px;
+    width: auto;
+}
+
+.header-nav #header-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-nav #header-link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    width: 25px;
+    height: 25px;
+    transition: all 0.1s ease-in-out;
+}
+
+.header-nav #header-link a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-list {
+    grid-area: icon-list;
+    color: antiquewhite;
+    background-color: var(--maincolor);
+}
+
+.main-content {
+    grid-area: main-content;
+    color: antiquewhite;
+    background-color: #202020;
+}
+
+.profile {
+    grid-area: profile;
+    color: antiquewhite;
+    background-color: #4f3852;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    font-family: "gg sans", "Helvetica Neue", Arial, sans-serif;
+
+    grid: [row1-start] "header header header" 30px [row1-end] [row2-start] "icon-list main-content main-content" auto [row2-end] [row3-start] "profile main-content main-content" 100px [row3-end] / 80px 50px auto;
+}

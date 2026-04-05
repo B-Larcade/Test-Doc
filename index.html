@@ -4,11 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Discord mimic</title>
 </head>
 
 <body>
-    <div id="icon-list">
+    <div class="header-nav">
+        <div id="header-text"><img src="img/discord-header.png" alt="Logo" width="20" height="20">KHSMP</div>
+        <div id="header-link">
+            <a href="#">
+                <img src="img/last-meadow.png" alt="HM" width="17" height="17">
+            </a>
+            <a href="#">
+                <img src="img/inbox.png" alt="IN" width="20" height="20">
+            </a>
+            <a href="#">
+                <img src="img/help.png" alt="HP" width="20" height="20">
+            </a>
+        </div>
+    </div>
+    <div class="icon-list">
         <ul>
             <li class="icon">A</li>
             <li class="icon">B</li>
@@ -16,7 +31,7 @@
             <li class="icon">D</li>
         </ul>
     </div>
-    <div id="main-content">
+    <div class="main-content">
         <div id="direct-message">
             <div id="friends-sidebar" class="sidebar"></div>
             <div id="dm-nav" class="navigation-bar"></div>
@@ -29,6 +44,9 @@
             <div id="server-content" class="content-space"></div>
         </div>
     </div>
+    <div class="profile">KickStart Studios</div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
