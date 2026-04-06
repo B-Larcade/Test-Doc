@@ -84,19 +84,69 @@
     margin: 0;
 }
 
+#holder {
+    display: flex;
+    justify-content: center;
+}
+
+.server-seprater {
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: var(--divider);
+    border: none;
+    margin: 10px 0;
+}
+
+.icon-list ul li:first-child {
+    margin-bottom: 0px;
+
+}
+
+.icon-list ul {
+
+    justify-content: center;
+}
+
 .icon-list ul li {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    margin-top: 10px;
+    margin-bottom: 10px;
     border: inset 1px var(--divider);
     border-radius: 10px;
     background-color: var(--thirdary);
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.icon-list ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2;
+    width: 5px;
+    height: 40%;
+    background-color: var(--accenttoaccent);
+    border-radius: 0 2px 2px 0;
+    transform: translateX(-100%);
+    transform: translateX(-30px);
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon-list ul li:hover::before {
+    transform: translateX(-22px);
+}
+
+.icon-list ul li.active::before {
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-22px);
 }
 
 .main-content {
@@ -106,10 +156,16 @@
     background-color: var(--maincolor);
     gap: 0;
     grid-template-rows: auto 1fr;
+    min-height: 100%;
+}
+
+#direct-message {
+    height: 100%;
 }
 
 #within-server {
     display: grid;
+    height: 100%;
     grid-template-columns: 200px auto;
     grid-template-rows: 50px auto;
     grid-template-areas:
@@ -158,5 +214,5 @@ body {
     height: 100vh;
     font-family: "gg sans", "Helvetica Neue", Arial, sans-serif;
 
-    grid: [row1-start] "header header header" 30px [row1-end] [row2-start] "icon-list main-content main-content" auto [row2-end] [row3-start] "profile main-content main-content" 100px [row3-end] / 80px 50px auto;
+    grid: [row1-start] "header header header" 30px [row1-end] [row2-start] "icon-list main-content main-content" 1fr [row2-end] [row3-start] "profile main-content main-content" 100px [row3-end] / 80px 50px auto;
 }
