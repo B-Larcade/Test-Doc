@@ -5,9 +5,9 @@
 
 :root {
     --blurple: #5865F2;
-    --maincolor: #2C2F33;
-    --secondary: #23272A;
-    --thirdary: #303033;
+    --maincolor: rgb(44, 45, 50);
+    --secondary: ;
+    --maincontent: rgb(50, 51, 57);
     --divider: rgba(255, 255, 255, 0.08);
 
     --accenttoaccent: #99AAb5;
@@ -117,7 +117,7 @@
     margin-bottom: 10px;
     border: inset 1px var(--divider);
     border-radius: 10px;
-    background-color: var(--thirdary);
+    background-color: var(--maincontent);
     width: 40px;
     height: 40px;
     text-align: center;
@@ -162,47 +162,6 @@
 #direct-message {
     height: 100%;
 }
-
-#within-server {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 200px auto;
-    grid-template-rows: 50px auto;
-    grid-template-areas:
-        "server-sidebar-head server-nav"
-        "server-sidebar server-content";
-    gap: 0;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: inset 0 0 0 1px var(--divider);
-}
-
-.server-sidebar {
-    grid-area: server-sidebar;
-    background-color: var(--maincolor);
-    border-left: 1px solid var(--divider);
-    height: 100vh
-        /* Please don't hate, if it works don't touch it! */
-}
-
-.server-sidebar-head {
-    grid-area: server-sidebar-head;
-    background-color: var(--maincolor);
-    border: 1px solid var(--divider);
-}
-
-.server-nav {
-    grid-area: server-nav;
-    background-color: var(--thirdary);
-    border-bottom: 1px solid var(--divider);
-    border-top: 1px solid var(--divider);
-}
-
-.server-content {
-    grid-area: server-content;
-    background-color: var(--thirdary);
-}
-
 
 .profile {
     grid-area: profile;
