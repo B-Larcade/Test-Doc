@@ -181,6 +181,8 @@
     grid-area: server-sidebar;
     background-color: var(--maincolor);
     border-left: 1px solid var(--divider);
+    height: 100vh
+        /* Please don't hate, if it works don't touch it! */
 }
 
 .server-sidebar-head {
