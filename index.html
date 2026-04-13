@@ -68,9 +68,16 @@
                 </div>
             </div>
             <div id="" class="navigation-bar server-nav"><img class="img-unactive" src="img/hashtag.svg" width="25px"
-                    height="25px">&nbsp;general</a></div>
+                    height="25px">&nbsp;<span id="currentchannel"></span></a></div>
             <div id="" class="content-space server-content">
-                <div class="content">content</div>
+                <div class="content">content
+                    <div class="sendmessage">
+                        <form action="/submit" method="post">
+                            <input type="text" id="message" name="message" rows="1" placeholder="message"
+                                required></input>
+                        </form>
+                    </div>
+                </div>
                 <div class="profiles">Profiles</div>
             </div>
         </div>

@@ -26,9 +26,7 @@ body {
         "contentarea members-list";
 }
 
-.content {
-    grid-area: contentarea;
-}
+
 
 .profiles {
     grid-area: members-list;
@@ -101,4 +99,44 @@ body {
     width: 17em;
     display: flex;
     justify-content: start;
+    cursor: pointer;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 84% auto;
+    grid-template-areas:
+        "messages"
+        "sendmessages";
+    grid-area: contentarea;
+}
+
+.sendmessage {
+    display: flex;
+    grid-area: sendmessages;
+    justify-self: center;
+    align-items: center;
+    width: 77.5em;
+    height: 3.75em;
+    background-color: rgb(57, 58, 65);
+    border-radius: 10px;
+
+}
+
+#message {
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 3.75em;
+    width: 61em;
+    font-size: 1em;
+    color: white;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+#message:focus {
+    caret-color: white;
+
+    caret-shape: bar;
 }
